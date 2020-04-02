@@ -313,12 +313,14 @@ footer {
     }
 
     p {
-        font-size: 35px;
+        padding: 20px 40px 0 40px;
+        font-size: 25px;
     }
 
     .infos {
         margin-top: 150px;
         flex-direction: column;
+        padding-top: 30px;
     }
 
     .container-news {
@@ -346,16 +348,48 @@ footer {
         width: 80%;
     }
 
+    .movie-card p {
+        font-size: 35px;
+    }
+
     .affiche-movie {
         width: 80%;
         height: auto;
     }
 
-    footer {
-        height: 125px;
-        align-items: center;
+    .movie-infos p {
+        font-size: 30px;
     }
 
+    .btn-allocine, .btn-reservation {
+        width: 100px;
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .group-form {
+        max-width: 60%;
+    }
+
+    label {
+        font-size: 50px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+        margin-left: 50px;
+        width: 350px;
+        height: 60px;
+    }
+
+    footer {
+        height: 300px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer p {
+        font-size: 30px;
+    }
 }
 
 /*iPads (portrait and landscape)*/
