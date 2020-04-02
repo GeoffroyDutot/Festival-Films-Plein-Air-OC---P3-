@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lancelot|PT+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script>
+         function f(id) {
+            //const display = document.getElementById(id).style.display;
+            //const newDisplay =  (display == 'none' ? 'flex' : 'none');
+            //document.getElementById(id).style.display = newDisplay;
+             const divclass = document.getElementById(id).className;
+             if (divclass == 'group-card') {
+                 document.getElementById(id).classList.add('close')
+             } else {
+                 document.getElementById(id).classList.remove('close')
+             }
+        }
+
+       // var to = target.offset().top+130px;
+        //scrollElement.animate({ scrollTop: to }
+    </script>
+    <title>Festival - Films de Plein Air</title>
+</head>
+<body>
+    <ul>
+        <li><img/><a href="#infos">Le Festival les Films de Plein Air</a></li>
+        <li><a href="#festival">Le Festival</a></li>
+        <li><a href="#news">Actualité</a></li>
+        <li><a href="#program">Programme</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="infos" id="infos">
+        <img class="media" src="assets/img/infos.jpg" alt="Projection film">
+        <h1>Le Festival de Film de Plein Air aura lieu du 5 au 8 août de 18h à minuit au parc Monceau à Paris. Soyez au rendez-vous !</h1>
+    </div>
+    <div class="festival" id="festival">
+        <h2>Le Festival</h2>
+        <div class="content">
+            <img class="media" src="assets/img/maps-park.png" alt="Carte parc Monceau de Paris">
+            <p>L'association "Les Films de Plein Air" vous propose chaque année son festival de projection de films d'auteurs au coeur de Paris. Proposé au parc Monceau de Paris vous pourrez visionnez tous les soirs entre le 5 et 8 août une séléction de trois films. Diffusés de 18h à Minuit, vous retrouverez le meilleur du film d'auteur.</p>
+        </div>
+   </div>
+    <div class="news" id="news">
+        <h2>Actualités</h2>
+        <div class="container-news">
+            <img class="media" src="assets/img/news.png" alt="actualité">
+            <p>Tenet le nouveau film de Nolan, sa bande annonce est sortie ! Le film devrait sortir en France le 22 juillet 2020.</p>
+        </div>
+    </div>
+    <div class="program-movies" id="program">
+        <h2>Programme</h2>
+        <div class="date">
+            <h3 onclick="f('five-august')" class="title-date">5 AOÛT</h3>
+            <div class="group-card" id="five-august">
+                <div class="movie-card">
+                    <h4>18 h</h4>
+                    <img src="assets/img/taxi_driver_affiche.jpg" class="affiche-movie">
+                    <h5>Taxi Driver</h5>
+                    <p>Genres: Drames, Policier</p>
+                    <div class="movie-infos">
+                        <p>De : Martin Scorsese</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 2 juin 1976</p>
+                        <p>Durée : 1h55</p>
+                        <p>Avec : Robert De Niro, Jodie Foster, Harvey Keitel</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=308.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-1" class="modal">
+                                <h5>Taxi Driver</h5>
+                                <h4>à 18h le 5 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser">Email: </label>
+                                        <input id="email-reser" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv">Téléphone: </label>
+                                        <input id="tel-reserv" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-1" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>20 h</h4>
+                    <img src="assets/img/Vol_au_dessus_d_un_nid_de_coucou_affiche.jpg" class="affiche-movie">
+                    <h5>Vol au-dessus d'un nid de coucou</h5>
+                    <p>Genre: Drame</p>
+                    <div class="movie-infos">
+                        <p>De : Milos Forman</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de reprise : 16 septembre 2009</p>
+                        <p>Durée : 2h09</p>
+                        <p>Avec : Michael Berryman, Dean R. Brooks, Jack Nicholson</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=2072.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-2" class="modal">
+                                <h5>Vol au-dessus d'un nid de coucou</h5>
+                                <h4>à 20h le 5 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-2">Email: </label>
+                                        <input id="email-reser-2" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-2">Téléphone: </label>
+                                        <input id="tel-reserv-2" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-2">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-2">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-2" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>22 h</h4>
+                    <img src="assets/img/edward_aux_mainds_d'argent_affiche.jpg" class="affiche-movie">
+                    <h5>Edward aux mains d'argent</h5>
+                    <p>Genres: Fantastique, Comédie, Romance</p>
+                    <div class="movie-infos">
+                        <p>De : Tim Burton</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 10 avril 1991</p>
+                        <p>Durée : 1h45</p>
+                        <p>Avec : Johnny Depp, Winona Ryder, Dianne Wiest</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=27624.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-3" class="modal">
+                                <h5>Edward aux mains d'argent</h5>
+                                <h4>à 22h le 5 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-3">Email: </label>
+                                        <input id="email-reser-3" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-3">Téléphone: </label>
+                                        <input id="tel-reserv-3" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-3">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-3">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-3" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <h3 onclick="f('six-august')" class="title-date">6 AOÛT</h3>
+            <div class="group-card close" id="six-august">
+                <div class="movie-card">
+                    <h4>18 h</h4>
+                    <img src="assets/img/big_fish_poster.jpg" class="affiche-movie">
+                    <h5>Big Fish</h5>
+                    <p>Genres: Comédie dramatique, Aventure</p>
+                    <div class="movie-infos">
+                        <p>De : Tim Burton</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 3 mars 2004 </p>
+                        <p>Durée : 2h05</p>
+                        <p>Avec : Ewan McGregor, Albert Finney, Jessica Lange</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=28644.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-4" class="modal">
+                                <h5>Big Fish</h5>
+                                <h4>à 18h le 6 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-4">Email: </label>
+                                        <input id="email-reser-4" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-4">Téléphone: </label>
+                                        <input id="tel-reserv-4" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-4">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-4">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-4" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>20 h</h4>
+                    <img src="assets/img/her_affiche.jpg" class="affiche-movie">
+                    <h5>Her</h5>
+                    <p>Genre: Drame, Romance, Science fiction</p>
+                    <div class="movie-infos">
+                        <p>De : Spike Jonze</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 19 mars 2014</p>
+                        <p>Durée : 2h06</p>
+                        <p>Avec : Joaquin Phoenix, Amy Adams, Rooney Mara</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=206799.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-5" class="modal">
+                                <h5>Her</h5>
+                                <h4>à 20h le 6 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-5">Email: </label>
+                                        <input id="email-reser-5" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-5">Téléphone: </label>
+                                        <input id="tel-reserv-5" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-5">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-5">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-5" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>22 h</h4>
+                    <img src="assets/img/Requiem-for-a-dream_affiche.jpg" class="affiche-movie">
+                    <h5>Requiem for a Dream</h5>
+                    <p>Genres: Drame</p>
+                    <div class="movie-infos">
+                        <p>De : Darren Aronofsky</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 21 mars 2001</p>
+                        <p>Durée : 1h50</p>
+                        <p>Avec : Jared Leto, Ellen Burstyn, Jennifer Connelly</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=26602.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-6" class="modal">
+                                <h5>Requiem for a Dream</h5>
+                                <h4>à 22h le 6 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-6">Email: </label>
+                                        <input id="email-reser-6" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-6">Téléphone: </label>
+                                        <input id="tel-reserv-6" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-6">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-6">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-6" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <h3 onclick="f('seven-august')" class="title-date">7 AOÛT</h3>
+            <div class="group-card close" id="seven-august">
+                <div class="movie-card">
+                    <h4>18 h</h4>
+                    <img src="assets/img/le_cercle_des_poetes_disparus_affiche.jpg" class="affiche-movie">
+                    <h5>Le cercle des poètes disparus</h5>
+                    <p>Genres: Comédie dramatique</p>
+                    <div class="movie-infos">
+                        <p>De : Peter Weir</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 17 janvier 1990</p>
+                        <p>Durée : 2h08</p>
+                        <p>Avec : Robin Williams, Ethan Hawke, Robert Sean Leonard</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=5280.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-7" class="modal">
+                                <h5>Le cercle des poètes disparus</h5>
+                                <h4>à 18h le 7 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-7">Email: </label>
+                                        <input id="email-reser-7" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-7">Téléphone: </label>
+                                        <input id="tel-reserv-7" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-7">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-7">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-7" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>20 h</h4>
+                    <img src="assets/img/into_the_wild_affiche.jpg" class="affiche-movie">
+                    <h5>Into the wild</h5>
+                    <p>Genre: Drame, Romance, Science fiction</p>
+                    <div class="movie-infos">
+                        <p>De : Sean Penn</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de reprise : 9 janvier 2008</p>
+                        <p>Durée : 2h27</p>
+                        <p>Avec : Emile Hirsch, Marcia Gay Harden, William Hurt</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=110101.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-8" class="modal">
+                                <h5>Into the wild</h5>
+                                <h4>à 20h le 7 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-8">Email: </label>
+                                        <input id="email-reser-8" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-8">Téléphone: </label>
+                                        <input id="tel-reserv-8" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-8">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-8">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-8" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>22 h 30</h4>
+                    <img src="assets/img/drive_affiche.jpg" class="affiche-movie">
+                    <h5>Drive</h5>
+                    <p>Genres: Action, Thriller</p>
+                    <div class="movie-infos">
+                        <p>De : Nicolas Winding Refn</p>
+                        <p>Nationalité : Américain</p>
+                        <p>Date de sortie : 5 octobre 2011</p>
+                        <p>Durée : 1h40</p>
+                        <p>Avec : Ryan Gosling, Carey Mulligan, Bryan Cranston</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=135082.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-9" class="modal">
+                                <h5>Drive</h5>
+                                <h4>à 20h le 7 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-9">Email: </label>
+                                        <input id="email-reser-9" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-9">Téléphone: </label>
+                                        <input id="tel-reserv-9" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-9">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-9">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-9" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="date">
+            <h3 onclick="f('eight-august')" class="title-date">8 AOÛT</h3>
+            <div class="group-card close" id="eight-august">
+                <div class="movie-card">
+                    <h4>18 h</h4>
+                    <img src="assets/img/2001_L_Odyssee_de_l_espace_affiche.jpg" class="affiche-movie">
+                    <h5>2001 : l'odysée de l'espace</h5>
+                    <p>Genres: Science fiction</p>
+                    <div class="movie-infos">
+                        <p>De : Stanley Kubrick</p>
+                        <p>Nationalité : Américain, Britannique</p>
+                        <p>Date de sortie : 27 septembre 1968</p>
+                        <p>Durée : 2h21</p>
+                        <p>Avec : Keir Dullea, Gary Lockwood, William Sylvester</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=27442.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-10" class="modal">
+                                <h5>2001 : l'odysée de l'espace</h5>
+                                <h4>à 18h le 8 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-10">Email: </label>
+                                        <input id="email-reser-10" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-10">Téléphone: </label>
+                                        <input id="tel-reserv-10" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-10">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-10">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-10" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-card">
+                    <h4>21 h</h4>
+                    <img src="assets/img/mulholland_drive_affiche.jpg" class="affiche-movie">
+                    <h5>Mulholland Drive</h5>
+                    <p>Genres: Fantastique, Thriller, Drame</p>
+                    <div class="movie-infos">
+                        <p>De : David Lynch</p>
+                        <p>Nationalité : Américain, Français</p>
+                        <p>Date de reprise : 10 mai 2017</p>
+                        <p>Durée : 2h26</p>
+                        <p>Avec : Naomi Watts, Laura Harring, Justin Theroux</p>
+                        <div class="btns-movie">
+                            <a target="_blank" href="http://www.allocine.fr/film/fichefilm_gen_cfilm=28682.html" class="btn-allocine">Allociné</a>
+                            <div id="modal-reserv-11" class="modal">
+                                <h5>Mulholland Drive</h5>
+                                <h4>à 21h le 8 août</h4>
+                                <form>
+                                    <div class="group-form">
+                                        <label for="email-reser-11">Email: </label>
+                                        <input id="email-reser-11" type="email">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="tel-reserv-11">Téléphone: </label>
+                                        <input id="tel-reserv-11" type="tel">
+                                    </div>
+                                    <div class="group-form">
+                                        <label for="nbr-people-11">Nombre de personne(s): </label>
+                                        <select name="nbr-people" id="nbr-people-11">
+                                            <option value="1">1 personne</option>
+                                            <option value="2">2 personne</option>
+                                            <option value="3">3 personne</option>
+                                            <option value="4">4 personne</option>
+                                            <option value="5">5 personne</option>
+                                            <option value="6">6 personne</option>
+                                            <option value="7">7 personne</option>
+                                            <option value="8">8 personne</option>
+                                            <option value="9">9 personne</option>
+                                            <option value="10">10 personne</option>
+                                        </select>
+                                    </div>
+                                    <input type="submit">
+                                </form>
+                                <a href="#" rel="modal:close">Fermer</a>
+                            </div>
+                            <a href="#modal-reserv-11" rel="modal:open" class="btn-reservation">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact</h2>
+            <form>
+                <div class="group-form">
+                    <label for="firstname">Prénom:</label>
+                    <input type="text" id="firstname" required>
+                </div>
+                <div class="group-form">
+                    <label for="lastname">Nom:</label>
+                    <input type="text" id="lastname" required>
+                </div>
+                <div class="group-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="group-form">
+                    <label for="subject">Objet:</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="group-form">
+                    <label for="message">Message:</label>
+                    <textarea type="text" id="message" required></textarea>
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+    <footer>
+        <p>CGU</p>
+        <p>Association "Les Films de Plein Air"</p>
+        <p>example@gmail.com</p>
+    </footer>
+</body>
+</html>
