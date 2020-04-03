@@ -385,13 +385,13 @@ footer {
     }
 
     footer {
-        height: 300px;
+        height: 115px;
         align-items: center;
         flex-direction: column;
     }
 
     footer p {
-        font-size: larger;
+        font-size: small;
     }
 }
 
