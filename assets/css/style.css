@@ -31,9 +31,12 @@ h5 {
 }
 p {
     font-size: large;
+    text-align: justify;
+}
+
+.text {
     padding-left: 20px;
     padding-right: 20px;
-    text-align: justify;
 }
 
 .menu-hamburger {
@@ -67,14 +70,6 @@ ul li a {
     cursor: pointer;
     text-decoration: none;
     color: #ffffff;
-}
-
-#news:before {
-    display: block;
-    content: " ";
-    margin-top: -45px;
-    height: 45px;
-    visibility: hidden;
 }
 
 .media {
@@ -162,10 +157,6 @@ ul li a {
     margin-bottom: 40px;
 }
 
-.movie-card p {
-    text-align: center;
-}
-
 .movie-infos {
     display: none;
 }
@@ -192,6 +183,7 @@ ul li a {
 .movie-card:hover .movie-infos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .btn-reservation {
@@ -337,6 +329,11 @@ footer {
         margin-top: 45px;
         flex-direction: column;
         padding-top: 30px;
+    }
+
+    iframe {
+        max-width: 100%;
+        max-height: 300px;
     }
 
     .container-news {
