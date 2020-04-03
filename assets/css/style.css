@@ -215,6 +215,11 @@ ul li a {
     background-color: #f1f3f3;
 }
 
+.modal a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
 form {
     display: flex;
     flex-flow: column wrap;
@@ -374,13 +379,20 @@ footer {
         max-width: 75%;
     }
 
+    .modal {
+        width: 100%;
+    }
+
+    .modal form {
+        align-items: flex-start;
+    }
+
     label {
-        font-size: 20px;
+        font-size: medium;
     }
 
     input[type="text"], input[type="email"], input[type="tel"], textarea, select {
-        margin-left: 25px;
-       height: 20px;
+        height: 20px;
         font-size: 1em;
     }
 
