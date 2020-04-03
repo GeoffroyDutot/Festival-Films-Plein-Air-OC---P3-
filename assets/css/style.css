@@ -371,18 +371,17 @@ footer {
     }
 
     .group-form {
-        max-width: 60%;
+        max-width: 75%;
     }
 
     label {
-        font-size: 50px;
+        font-size: 20px;
     }
 
     input[type="text"], input[type="email"], input[type="tel"], textarea, select {
-        margin-left: 50px;
-        width: 350px;
-        height: 60px;
-        font-size: 2em;
+        margin-left: 25px;
+       height: 20px;
+        font-size: 1em;
     }
 
     footer {
