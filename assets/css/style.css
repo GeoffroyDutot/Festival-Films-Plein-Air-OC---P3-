@@ -69,6 +69,14 @@ ul li a {
     color: #ffffff;
 }
 
+#news:before {
+    display: block;
+    content: " ";
+    margin-top: -45px;
+    height: 45px;
+    visibility: hidden;
+}
+
 .media {
     max-width: 300px;
 }
@@ -341,7 +349,7 @@ footer {
     }
 
     .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .group-card {
@@ -446,7 +454,7 @@ footer {
     }
 
     .content {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .container-news {
