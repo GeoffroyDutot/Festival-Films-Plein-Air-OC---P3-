@@ -370,21 +370,13 @@ footer {
     }
 
     .btn-allocine, .btn-reservation {
-        width: 50px;
+        width: 55px;
         height: 16px;
         font-size: medium;
     }
 
-    .group-form {
-        max-width: 75%;
-    }
-
     .modal {
         width: 100%;
-    }
-
-    .modal form {
-        align-items: flex-start;
     }
 
     label {
@@ -392,6 +384,7 @@ footer {
     }
 
     input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+        width: 160px;
         height: 20px;
         font-size: 1em;
     }
