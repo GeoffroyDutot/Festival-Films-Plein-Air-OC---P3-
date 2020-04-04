@@ -220,6 +220,16 @@ ul li a {
     color: #1a73e8;
 }
 
+.cgu {
+    margin-top: 90px;
+    padding-top: 10px;
+}
+
+.cgu-content {
+    background-color: #f8f9fa;
+    padding: 10px 10px 10px 10px;
+}
+
 form {
     display: flex;
     flex-flow: column wrap;
